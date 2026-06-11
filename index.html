@@ -1,27 +1,374 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>My Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vio Zaki Firmansyah — Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- NAVBAR -->
-    <div>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+    <!-- ░░ NAVBAR ░░ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">&lt;VZF /&gt;</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-    <!-- NAVBAR END -->
-    <img src="387290_3.jpg" width="50%" height="50%" />
-    <!-- CONTENT -->
-    <div>CONTENT</div>
-    <!-- CONTENT END -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-    <!-- FOOTER -->
-    <div>
-      <h1>HII</h1>
-    </div>
-    <!-- FOOTER END -->
+    <!-- ░░ HERO ░░ -->
+    <section class="hero" id="about">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-frame">
+            <img
+              src="photo.jpg"
+              alt="Vio Zaki Firmansyah"
+              class="hero-photo"
+              id="profilePhoto"
+              onerror="this.parentElement.classList.add('no-photo')"
+            />
+            <div class="photo-placeholder" aria-hidden="true">
+              <svg
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="40"
+                  cy="30"
+                  r="16"
+                  stroke="#00e5ff"
+                  stroke-width="2"
+                />
+                <path
+                  d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30"
+                  stroke="#00e5ff"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="photo-ring"></div>
+          </div>
+        </div>
+        <div class="hero-text">
+          <span class="hero-eyebrow">// Hello, world!</span>
+          <h1 class="hero-name">
+            Vio Zaki<br /><span class="accent">Firmansyah</span>
+          </h1>
+          <p class="hero-tagline">
+            <span class="tagline-prefix">&gt; </span>
+            <span class="tagline-typed" id="typedText"></span>
+            <span class="cursor" id="cursor">|</span>
+          </p>
+          <p class="hero-desc">
+            Informatics Engineering undergraduate with a passion for building
+            things — from productivity tools to game community bots. I write
+            clean code and love turning ideas into real, running software.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ░░ SKILLS ░░ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 01</span>
+          <h2 class="section-title">Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card" data-delay="0">
+            <div class="skill-icon">⚙️</div>
+            <h3>Productivity Tools</h3>
+            <p>
+              Microsoft Office Suite — Word, Excel, PowerPoint. Comfortable
+              producing professional reports, data sheets, and presentations.
+            </p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-delay="100">
+            <div class="skill-icon">🟢</div>
+            <h3>Node.js</h3>
+            <p>
+              Building Discord bots and automation scripts using Node.js,
+              discord.js v14, and the Sapphire framework with SQLite databases.
+            </p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="60"></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-delay="200">
+            <div class="skill-icon">🗄️</div>
+            <h3>Database</h3>
+            <p>
+              SQLite with better-sqlite3 for local persistent data management in
+              bot applications.
+            </p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="50"></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-delay="300">
+            <div class="skill-icon">🐙</div>
+            <h3>Version Control</h3>
+            <p>Git & GitHub for source management and project collaboration.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-width="55"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ EXPERIENCE ░░ -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 02</span>
+          <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 — Present</span>
+              <h3>Community Manager & Bot Developer</h3>
+              <p class="timeline-company">
+                Freax Squad — Monster Hunter Community
+              </p>
+              <p>
+                Founded and manage a gaming community centered around Monster
+                Hunter. Built and maintain <strong>FreaxBot</strong>, a custom
+                Discord bot featuring quest schedulers, lobby management, and
+                game-themed commands for the community members.
+              </p>
+              <div class="timeline-tags">
+                <span>Discord.js</span><span>Node.js</span><span>SQLite</span
+                ><span>Community Management</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 — Present</span>
+              <h3>Informatics Engineering Student</h3>
+              <p class="timeline-company">University — Indonesia</p>
+              <p>
+                Actively studying core topics including Software Engineering,
+                Data Analysis, Operations Research, and Information Systems.
+                Applying academic knowledge in real-world hobby and community
+                projects.
+              </p>
+              <div class="timeline-tags">
+                <span>Software Engineering</span><span>Data Analysis</span
+                ><span>Operations Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ PROJECTS ░░ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 03</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-header">
+              <div class="project-icon">🤖</div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/jakyy-prog"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                  title="GitHub"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">FreaxBot</h3>
+            <p class="project-desc">
+              A Monster Hunter–themed Discord bot built for the Freax Squad
+              community. Features include persistent lobby scheduling, quest
+              data management via local SQLite databases, and game-themed slash
+              commands — hosted on Sparked Host.
+            </p>
+            <div class="project-tech">
+              <span>Node.js</span>
+              <span>discord.js v14</span>
+              <span>Sapphire Framework</span>
+              <span>SQLite</span>
+            </div>
+            <div class="project-status">
+              <span class="status-dot"></span> Active Development
+            </div>
+          </div>
+
+          <!-- Placeholder for more projects -->
+          <div class="project-card project-placeholder reveal">
+            <div class="placeholder-inner">
+              <span class="plus-icon">+</span>
+              <p>More projects coming soon</p>
+              <a
+                href="https://github.com/jakyy-prog"
+                target="_blank"
+                rel="noopener"
+                >github.com/jakyy-prog</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ EDUCATION ░░ -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 04</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-info">
+            <span class="edu-date">2022 — Present</span>
+            <h3>S1 Informatika / Informatics Engineering</h3>
+            <p class="edu-school">Universitas — Indonesia</p>
+            <p class="edu-desc">
+              Focusing on software engineering principles, data systems, and
+              information technology. Active participant in programming and tech
+              communities.
+            </p>
+            <div class="edu-courses">
+              <span>Software Engineering</span>
+              <span>Data Analysis</span>
+              <span>Operations Research</span>
+              <span>Information Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 05</span>
+          <h2 class="section-title">Contact</h2>
+        </div>
+        <div class="contact-wrapper reveal">
+          <p class="contact-lead">
+            Have a project, opportunity, or just want to say hi? Let's connect.
+          </p>
+          <div class="contact-links">
+            <a
+              href="https://github.com/jakyy-prog"
+              target="_blank"
+              rel="noopener"
+              class="contact-item"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+              <span>jakyy-prog</span>
+            </a>
+            <a
+              href="mailto:zakivio1@gmail.com"
+              class="contact-item"
+              id="emailLink"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m2 7 10 7 10-7" />
+              </svg>
+              <span>zakivio1@gmail.com</span>
+            </a>
+            <a href="#" class="contact-item" id="linkedinLink">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ FOOTER ░░ -->
+    <footer class="footer">
+      <p>
+        Built with <span class="accent">&#x2665;</span> by Vio Zaki Firmansyah
+        &mdash; <span id="year"></span>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
